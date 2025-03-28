@@ -1,15 +1,14 @@
 <div class="container">
-    <div class="card">
-      <h2>Usuario</h2>
-      <input type="text" placeholder="Ingresa un nombre">
-  
-      <h2>Correo</h2>
-      <input type="email" placeholder="Ingresa el Correo">
-  
-      <h2>Contraseña</h2>
-      <input type="password" placeholder="ingresa una Contraseña">
-  
-      <button class="btn-registrarse" (click)="onLogin()">Registrarse</button>
-    </div>
+  <div class="card">
+    <h2>Usuario</h2>
+    <input type="text" placeholder="Ingresa un nombre" [(ngModel)]="usuario.nombre">
+
+    <h2>Correo</h2>
+    <input type="email" placeholder="Ingresa el Correo" [(ngModel)]="usuario.correo">
+
+    <h2>Contraseña</h2>
+    <input type="password" placeholder="Ingresa una Contraseña" [(ngModel)]="usuario.contrasena">
+
+    <button class="btn-registrarse" (click)="onRegister()">Registrarse</button>
   </div>
-  
+</div>
