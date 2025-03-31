@@ -1,21 +1,36 @@
-::ng-deep body {
+/* Reset de estilos */
+body {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/assets/imagen/fondo.jpg');
-    background-size: cover;
-    background-position: center;
-  }
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor del video de fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía el video al fondo */
+    object-fit: cover; /* Ajusta el video sin distorsionarlo */
+}
+
+/* Contenedor principal */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
+    z-index: 1; /* Asegura que esté sobre el video */
 }
 
+/* Tarjeta de registro */
 .card {
     background: linear-gradient(to bottom, #dbefff, #017bba);
     padding: 30px;
@@ -25,9 +40,8 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
+h2, p {
     margin: 10px 0;
-    font-size: 18px;
 }
 
 input {
@@ -38,10 +52,10 @@ input {
     border-bottom: 2px solid black;
     background: transparent;
     outline: none;
-    color: black;
     font-size: 16px;
 }
 
+/* Botón de registro */
 .btn-registrarse {
     width: 100%;
     background: #3dbff0;
@@ -56,4 +70,15 @@ input {
 
 .btn-registrarse:hover {
     background: #0288d1;
+}
+
+hr {
+    margin: 15px 0;
+    border: 0.5px solid black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
