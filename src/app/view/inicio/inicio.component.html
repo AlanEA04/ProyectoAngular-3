@@ -1,28 +1,42 @@
 <div class="navbar">
-    <button class="nav-button" (click)="onInicio()">Inicio</button>
-    <button class="nav-button" (click)="onHistorial()">Historial</button>
-    <button class="nav-button" (click)="onAlarma()">Alarmas</button>
-    <button class="nav-button" (click)="onLogin()">Cerrar Sesión</button>
-  </div>
-  
-  <div class="content">
-    <div class="status-container">
-      <div class="status-item">
-        <p>Bomba de Agua</p>
-        <label class="switch">
-          <input type="checkbox">
-          <span class="slider"></span>
-        </label>
-      </div> 
-      <div class="status-item">
-        <p>Porcentaje</p>
-        <h2>85 %</h2>
-      </div>
-      <div class="status-item">
-        <p>Tiempo restante</p>
-        <h2>00 : 30</h2>
-      </div>
+  <button class="nav-button" (click)="onInicio()">Inicio</button>
+  <button class="nav-button" (click)="onHistorial()">Historial</button>
+  <button class="nav-button" (click)="onAlarma()">Alarmas</button>
+  <button class="nav-button" (click)="onLogin()">Cerrar Sesión</button>
+</div>
+
+<div class="content">
+  <div class="status-container">
+    <div class="status-item card">
+
+      <p>Bomba de Agua</p>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="status-item card">
+      <p>Porcentaje</p>
+      <h2>85 %</h2>
+    </div>
+    <!-- Al hacer clic en esta tarjeta se redirige a Alarmas -->
+    <div class="status-item card" (click)="onAlarma()">
+      <p>Tiempo restante</p>
+      <h2>00 : 30</h2>
     </div>
   </div>
-  <app-listado-usuarios></app-listado-usuarios>
-  
+
+  <div class="chart-container">
+    <ngx-charts-pie-chart 
+      [results]="waterLevelData" 
+      [view]="[400, 300]" 
+      [legend]="false"
+      [labels]="true"
+      [doughnut]="true"
+      [gradient]="true"
+      [scheme]="colorScheme">
+    </ngx-charts-pie-chart>
+  </div>
+</div>
+
+<app-listado-usuarios></app-listado-usuarios>

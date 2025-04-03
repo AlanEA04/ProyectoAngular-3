@@ -6,10 +6,11 @@ import { LoginComponent } from "./view/login/login.component";
 import { RegistrosComponent } from "./view/registros/registros.component";
 import { InicioComponent } from "./view/inicio/inicio.component";
 import { HistorialComponent } from "./view/historial/historial.component";
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RecuperarComponent, AlarmaComponent, LoginComponent, RegistrosComponent, InicioComponent, HistorialComponent],
+  imports: [RouterOutlet, RecuperarComponent, AlarmaComponent, LoginComponent, RegistrosComponent, InicioComponent, HistorialComponent, NgxChartsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
