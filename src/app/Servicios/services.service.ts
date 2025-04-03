@@ -11,6 +11,10 @@ export class ServicesService {
 
   constructor(private http: HttpClient) {}
 
+  loginUsuario(correo: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/by-email/${correo}`);
+  }
+
   obtenerDatos(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
@@ -18,4 +22,5 @@ export class ServicesService {
   guardaUsuario(usuario: { nombre: string; correo: string; contrasena: string }): Observable<any> {
     return this.http.post(this.apiUrl, usuario);
   }
+
 }
