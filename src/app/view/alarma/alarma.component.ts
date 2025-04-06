@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 
 export class AlarmaComponent {
   alarms = [
-    { time: '5:00 a.m.', days: ['Do.', 'Lu.', 'Ma.', 'Mi.', 'Ju.', 'Vi.', 'Sa.'] },
-    { time: '5:00 a.m.', days: ['Do.', 'Lu.', 'Ma.', 'Mi.', 'Ju.', 'Vi.', 'Sa.'] },
-    { time: '5:00 a.m.', days: ['Do.', 'Lu.', 'Ma.', 'Mi.', 'Ju.', 'Vi.', 'Sa.'] },
-    { time: '5:00 a.m.', days: ['Do.', 'Lu.', 'Ma.', 'Mi.', 'Ju.', 'Vi.', 'Sa.'] },
-    { time: '5:00 a.m.', days: ['Do.', 'Lu.', 'Ma.', 'Mi.', 'Ju.', 'Vi.', 'Sa.'] },
+    { time: '15:10:00',  },
+    { time: '23:15:00',  },
+    { time: '15:45:00', },
+    { time: '12:25:00',  },
+    { time: '22:30:00', },
   ];
 
 
