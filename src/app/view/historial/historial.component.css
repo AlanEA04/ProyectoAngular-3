@@ -1,4 +1,11 @@
-/* Estilos del menú */
+:host {
+    display: block;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #90b9da, #017bba);
+    background-size: cover;
+    background-position: center;
+  }
+
 nav {
     background: #50b4c8;
     padding: 10px;
