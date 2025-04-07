@@ -1,10 +1,7 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+:host {
+  display: block;
+  min-height: 100vh;
   background: linear-gradient(to bottom, #90b9da, #017bba);
-  height: 100vh;
-  background: #96b6d1;
   background-size: cover;
   background-position: center;
 }
