@@ -14,30 +14,28 @@ import { FormsModule } from '@angular/forms'; // Importar FormsModule
 })
 export class LoginComponent {
   correo: string = '';
+contrasena: string = '';
 
   constructor(private router: Router, private service: ServicesService) {}
 
   onInicio() {
-    if (!this.correo.trim()) {
-      alert('Por favor, ingresa tu correo.');
+    if (!this.correo || !this.contrasena) {
+      alert('Debes ingresar correo y contraseña');
       return;
     }
   
-    this.service.loginUsuario(this.correo).subscribe(
-      (response: any) => {  // Especificar el tipo de response
-        if (response) {
-          alert('Inicio de sesión exitoso');
-          localStorage.setItem('usuario', JSON.stringify(response));
-          this.router.navigate(['/inicio']);
-        } else {
-          alert('Correo no registrado');
-        }
+    this.service.loginConCorreoYContrasena(this.correo, this.contrasena).subscribe({
+      next: (usuario) => {
+        alert(`Bienvenido, ${usuario.nombre}`);
+        
+        // Redirige al home o la ruta que quieras
+        this.router.navigate(['/inicio']); // Asegúrate de que esta ruta exista
       },
-      (error: any) => {  // Especificar el tipo de error
-        console.error('Error al iniciar sesión', error);
-        alert('Correo no encontrado');
+      error: (err) => {
+        console.error('Error al iniciar sesión', err);
+        alert('Correo o contraseña incorrectos');
       }
-    );
+    });
   }
   
 

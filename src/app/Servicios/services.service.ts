@@ -22,5 +22,9 @@ export class ServicesService {
   guardaUsuario(usuario: { nombre: string; correo: string; contrasena: string }): Observable<any> {
     return this.http.post(this.apiUrl, usuario);
   }
+  loginConCorreoYContrasena(correo: string, contrasena: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/by-email-and-password/${correo}/${contrasena}`);
+  }
+  
 
 }

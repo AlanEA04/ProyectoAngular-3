@@ -10,10 +10,12 @@
 <div class="container">
   <div class="card">
     <h2>Correo</h2>
-    
+  
+      <input type="email" placeholder="Ingresa el correo" [(ngModel)]="correo" required>
 
     <h2>Contraseña</h2>
-    <input type="email" placeholder="Ingresa el correo" [(ngModel)]="correo" required>
+      <input type="password" placeholder="Ingresa la contraseña" [(ngModel)]="contrasena" required>
+
 
     <a class="recuperar" (click)="onRecuperar()">Recuperar Contraseña</a>
 
