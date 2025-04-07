@@ -17,16 +17,12 @@
     </div>
     <div class="status-item card">
       <p>Porcentaje</p>
-      <h2>85 %</h2>
+      <h2>65 %</h2>
     </div>
-    <!-- Al hacer clic en esta tarjeta se redirige a Alarmas -->
-    <div class="status-item card" (click)="onAlarma()">
-      <p>Tiempo restante</p>
-      <h2>00 : 30</h2>
-    </div>
+    
   </div>
 
-  <div class="chart-container">
+  <div class="chart-container" style="color: aqua;">
     <ngx-charts-pie-chart 
       [results]="waterLevelData" 
       [view]="[400, 300]" 
@@ -39,4 +35,4 @@
   </div>
 </div>
 
-<app-listado-usuarios></app-listado-usuarios>
+

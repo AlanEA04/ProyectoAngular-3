@@ -13,8 +13,8 @@ import { NgxChartsModule, Color, ScaleType } from '@swimlane/ngx-charts';
 })
 export class InicioComponent {
   waterLevelData = [
-    { name: 'Agua', value: 85 },
-    { name: 'Vacío', value: 15 }
+    { name: 'Agua', value: 65 },
+    { name: 'Vacío', value: 35 }
   ];
 
   colorScheme: Color = {

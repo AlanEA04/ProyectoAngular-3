@@ -10,6 +10,7 @@ import { HistorialComponent } from "./view/historial/historial.component";
 
 
 export const routes: Routes = [
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' },
     {path: 'login', title: 'Login' , component: LoginComponent},
     {path: 'registros', title: 'Registros' , component: RegistrosComponent},
     {path: 'recuperar', title: 'Recuperar' , component: RecuperarComponent},

@@ -4,6 +4,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100vh;
+    background-color: #93cae0;
 }
 
 nav {
@@ -33,9 +34,10 @@ nav {
 }
 
 .nav-button:hover {
-    color: white;
+    color: #ffcc00;
     transform: scale(1.1);
 }
+
 
 .content {
     width: 80%;
