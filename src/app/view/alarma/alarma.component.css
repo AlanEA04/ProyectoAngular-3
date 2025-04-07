@@ -68,6 +68,8 @@ nav {
 .alarm {
     background: #b3e0f2;
     padding: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 10px;
     border-radius: 10px;
     margin: 10px 0;
     display: flex;
@@ -75,8 +77,12 @@ nav {
     align-items: center;
     font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
 }
-
+.alarm:hover {
+    background-color: #a0d1e8;
+    transform: scale(1.02);
+}
 /* Estilos para el texto dentro de la alarma */
 .time {
     margin-left: 20px;

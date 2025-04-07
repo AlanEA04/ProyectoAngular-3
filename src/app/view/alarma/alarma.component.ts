@@ -1,37 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlarmaService } from '../../Servicios/alarma.service'; // ajusta la ruta si es necesario
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-alarma',
   templateUrl: './alarma.component.html',
-  styleUrl: './alarma.component.css'
+  styleUrls: ['./alarma.component.css'],
+  imports: [CommonModule]
 })
+export class AlarmaComponent implements OnInit {
+  alarms: any[] = [];
 
-export class AlarmaComponent {
-  alarms = [
-    { time: '15:10:00',  },
-    { time: '23:15:00',  },
-    { time: '15:45:00', },
-    { time: '12:25:00',  },
-    { time: '22:30:00', },
-  ];
+  constructor(private router: Router, private alarmaService: AlarmaService) {}
 
+  ngOnInit() {
+    this.alarmaService.obtenerAlarmas().subscribe(data => {
+      this.alarms = data;
+    });
+  }
 
-  constructor(private router: Router) {}
-  
-    onInicio() {
-      this.router.navigate(['/inicio']);
-    }
-  
-    onHistorial() {
-      this.router.navigate(['/historial']);
-    }
-  
-    onAlarma() {
-      this.router.navigate(['/alarma']);
-    }
-  
-    onLogin() {
-      this.router.navigate(['/login']);
-    }
+  onInicio() {
+    this.router.navigate(['/inicio']);
+  }
+
+  onHistorial() {
+    this.router.navigate(['/historial']);
+  }
+
+  onAlarma() {
+    this.router.navigate(['/alarma']);
+  }
+
+  onLogin() {
+    this.router.navigate(['/login']);
+  }
 }

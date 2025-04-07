@@ -15,26 +15,9 @@
           </div>
         
         <div class="alarms">
-            <div class="alarm">
-                <span class="time">5:00 a.m.</span>
-                <span class="days">Do. Lu. Ma. Mi. Ju. Vi. Sa.</span>
-            </div>
-            <div class="alarm">
-                <span class="time">5:00 a.m.</span>
-                <span class="days">Do. Lu. Ma. Mi. Ju. Vi. Sa.</span>
-            </div>
-            <div class="alarm">
-                <span class="time">5:00 a.m.</span>
-                <span class="days">Do. Lu. Ma. Mi. Ju. Vi. Sa.</span>
-            </div>
-            <div class="alarm">
-                <span class="time">5:00 a.m.</span>
-                <span class="days">Do. Lu. Ma. Mi. Ju. Vi. Sa.</span>
-            </div>
-            <div class="alarm">
-                <span class="time">5:00 a.m.</span>
-                <span class="days">Do. Lu. Ma. Mi. Ju. Vi. Sa.</span>
-            </div>
+            <div class="alarm" *ngFor="let alarm of alarms">
+                <span class="time">{{ alarm.hora }}</span>
+              </div>
         </div>
     </div>
 </body>
