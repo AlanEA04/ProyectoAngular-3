@@ -32,6 +32,8 @@ nav {
     transition: color 0.3s, transform 0.2s;
 }
 
+
+
 .nav-button:hover {
     color: #ffcc00;
     transform: scale(1.1);
