@@ -10,19 +10,18 @@
       <div class="status-item">
         <p>Bomba de Agua</p>
         <label class="switch">
-          <input type="checkbox">
+          <input type="checkbox" [(ngModel)]="bombaEncendida" (change)="toggleBomba()" />
           <span class="slider"></span>
         </label>
       </div> 
       <div class="status-item">
         <p>Porcentaje</p>
-        <h2>85 %</h2>
+        <h2>{{ porcentajeAgua }} %</h2>
+        <canvas id="graficaAgua"></canvas>
       </div>
-      <div class="status-item">
-        <p>Tiempo restante</p>
-        <h2>00 : 30</h2>
-      </div>
+      
+      
     </div>
   </div>
-  <app-listado-usuarios></app-listado-usuarios>
+  
   

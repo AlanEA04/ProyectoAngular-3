@@ -97,3 +97,9 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(14px);
 }
+
+canvas {
+    width: 200px;
+    height: 200px;
+  }
+  
