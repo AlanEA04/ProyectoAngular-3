@@ -1,0 +1,86 @@
+
+::ng-deep body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/imagen/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card {
+    background: linear-gradient(to bottom, #dbefff, #017bba);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h2, p {
+    margin: 10px 0;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+    outline: none;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .btn-cancelar {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-cancelar:hover {
+    background: darkred;
+  }
+  
+  .btn-enviar {
+    background: #3dbff0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-enviar:hover {
+    background: #0288d1;
+  }
+  
+  hr {
+    margin: 15px 0;
+    border: 0.5px solid black;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

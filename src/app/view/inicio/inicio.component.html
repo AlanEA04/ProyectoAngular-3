@@ -1,0 +1,27 @@
+<div class="navbar">
+    <button class="nav-button" (click)="onInicio()">Inicio</button>
+    <button class="nav-button" (click)="onHistorial()">Historial</button>
+    <button class="nav-button" (click)="onAlarma()">Alarmas</button>
+    <button class="nav-button" (click)="onLogin()">Cerrar Sesión</button>
+  </div>
+  
+  <div class="content">
+    <div class="status-container">
+      <div class="status-item">
+        <p>Bomba de Agua</p>
+        <label class="switch">
+          <input type="checkbox" [(ngModel)]="bombaEncendida" (change)="toggleBomba()" />
+          <span class="slider"></span>
+        </label>
+      </div> 
+      <div class="status-item">
+        <p>Porcentaje</p>
+        <h2>{{ porcentajeAgua }} %</h2>
+        <canvas id="graficaAgua"></canvas>
+      </div>
+      
+      
+    </div>
+  </div>
+  
+  

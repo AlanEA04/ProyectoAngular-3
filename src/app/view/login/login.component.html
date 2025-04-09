@@ -1,0 +1,28 @@
+<!-- Video de fondo -->
+<div class="video-background">
+  <video autoplay muted loop>
+    <source src="assets/video/fondo.mp4" type="video/mp4" />
+    Tu navegador no soporta el formato de video.
+  </video>
+</div>
+
+<!-- Contenido del login -->
+<div class="container">
+  <div class="card">
+    <h2>Correo</h2>
+  
+      <input type="email" placeholder="Ingresa el correo" [(ngModel)]="correo" required>
+
+    <h2>Contraseña</h2>
+      <input type="password" placeholder="Ingresa la contraseña" [(ngModel)]="contrasena" required>
+
+
+    <a class="recuperar" (click)="onRecuperar()">Recuperar Contraseña</a>
+
+    <button class="btn-iniciar" (click)="onInicio()">Iniciar Sesión</button>
+
+    <hr>
+
+    <button class="btn-crear" (click)="onRegistros()">Crear cuenta</button>
+  </div>
+</div>

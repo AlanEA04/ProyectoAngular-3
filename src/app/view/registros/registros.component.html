@@ -1,0 +1,23 @@
+<!-- Video de fondo -->
+<div class="video-background">
+  <video autoplay muted loop>
+    <source src="assets/video/fondo.mp4" type="video/mp4" />
+    Tu navegador no soporta el formato de video.
+  </video>
+</div>
+
+<!-- Contenedor del formulario -->
+<div class="container">
+  <div class="card">
+    <h2>Usuario</h2>
+    <input type="text" placeholder="Ingresa un nombre" [(ngModel)]="usuario.nombre">
+
+    <h2>Correo</h2>
+    <input type="email" placeholder="Ingresa el Correo" [(ngModel)]="usuario.correo">
+
+    <h2>Contraseña</h2>
+    <input type="password" placeholder="Ingresa una Contraseña" [(ngModel)]="usuario.contrasena">
+
+    <button class="btn-registrarse" (click)="onRegister()">Registrarse</button>
+  </div>
+</div>
